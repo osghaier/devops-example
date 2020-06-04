@@ -20,7 +20,7 @@ services:
       - 4567:4567
     volumes:
       - /home/rbayramu@ms.imagemaster.local/tchallenge-service:/root/tchallenge-service
-    command: cd /root/tchallenge-service/source && gradle bootRun
+    command: /bin/bash -e "cd /root/tchallenge-service/source && gradle bootRun"
 
 volumes:
   mongodb_data_container:
