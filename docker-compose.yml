@@ -14,9 +14,9 @@ services:
       - ./mongo_db/init_db.js:/docker-entrypoint-initdb.d/init_db.js
       - ./mongo_db/test_db.js:/docker-entrypoint-initdb.d/test_db.js
 
-  tch_backend:
+  tch_back:
     image: gradle:latest
-    container_name: tch_backend
+    container_name: tch_back
     depends_on:
       - mongo_db
     ports:
