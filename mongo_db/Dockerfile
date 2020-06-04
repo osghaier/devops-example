@@ -12,4 +12,4 @@ RUN echo 'making database with user' && \
     mongo admin --quiet -u 'root' -p 'Admin123!' < create_user.js && \
     mongo admin --quiet -u 'root' -p 'Admin123!' < test_db.js
 
-CMD ["/bin/bash"]
+CMD ["mongod"]
