@@ -1,9 +1,5 @@
 // init_db.js
-// =================================================== 
-
-use tchallenge
-
-use admin 
+// ===================================================
 
 db.createUser({
     user: "tch_user",
@@ -11,9 +7,7 @@ db.createUser({
     roles: [{ role: "readWrite", db: "tchallenge" }]
 })
 
-use tchallenge 
-
-db.createCollection("accounts") 
+db.createCollection("accounts")
 
 db.accounts.insert({
         "_id": ObjectId("5eb92873d35c2d9398b5d8a4"),
