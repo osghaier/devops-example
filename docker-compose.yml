@@ -4,8 +4,6 @@ services:
     image: mongo:4.2.1
     container_name: mongo_db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: Admin123!
       MONGO_INITDB_DATABASE: tchallenge
     ports:
       - 27017:27017
