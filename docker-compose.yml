@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongo_db:
+    image: mongo:4.2.1
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Admin123!
+      MONGO_INITDB_DATABASE: tchallenge
+    command: /bin/bash -e "./mongo_db/init_db_and_create_user.sh"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+
+  tch_backend:
+    image: gradle:latest
+    depends_on:
+      - mongo_db
+    ports:
+      - 4567:4567
+    volumes:
+      - /home/rbayramu@ms.imagemaster.local/tchallenge-service:/root/tchallenge-service
+    command: cd /root/tchallenge-service/source && gradle bootRun
+
+volumes:
+  mongodb_data_container:
