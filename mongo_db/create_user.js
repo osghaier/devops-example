@@ -1,4 +1,4 @@
-// make_user.js 
+// create_user.js
 // =================================================== 
 
 use tchallenge
@@ -8,4 +8,3 @@ db.createUser({
     pwd: "tch_pwd",
     roles: [{ role: "readWrite", db: "tchallenge" }]
 })
-

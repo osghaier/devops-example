@@ -1,4 +1,4 @@
-// initdb.js 
+// init_db.js
 // =================================================== 
 
 use tchallenge
@@ -6,8 +6,8 @@ use tchallenge
 use admin 
 
 db.createUser({
-    user: "username",
-    pwd: "password",
+    user: "tch_user",
+    pwd: "tch_pwd",
     roles: [{ role: "readWrite", db: "tchallenge" }]
 })
 
