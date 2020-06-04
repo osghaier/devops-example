@@ -10,6 +10,7 @@ services:
     volumes:
       - ./data:/data/db
       - ./mongo_db/init_db.js:/docker-entrypoint-initdb.d/init_db.js
+      - ./mongo_db/make_user.js:/docker-entrypoint-initdb.d/make_user.js
       - ./mongo_db/test_db.js:/docker-entrypoint-initdb.d/test_db.js
 
   tch_back:
