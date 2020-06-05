@@ -3,4 +3,6 @@
 
 use tchallenge
 
+db.getUsers()
+
 db.accounts.find().pretty()

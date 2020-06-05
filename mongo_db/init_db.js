@@ -1,15 +1,13 @@
 // init_db.js
 // ===================================================
 
-use admin
+use tchallenge
 
 db.createUser({
     user: "tch_user",
     pwd: "tch_pwd",
     roles: [{ role: "readWrite", db: "tchallenge" }]
 })
-
-use tchallenge
 
 db.createCollection("accounts")
 
