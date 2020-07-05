@@ -33,4 +33,4 @@ services:
       - 4200:4200
     volumes:
       - ../tchallenge-participant:/root/tchallenge-participant
-    command: /bin/sh -c "cd /root/tchallenge-service/source && npm -v && npm install && npm list -g"
+    command: /bin/sh -c "cd /root/tchallenge-participant/source && npm -v && npm install && npm list -g"
