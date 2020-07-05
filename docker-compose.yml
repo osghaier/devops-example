@@ -22,3 +22,13 @@ services:
     volumes:
       - ../tchallenge-service:/root/tchallenge-service
     command: /bin/sh -c "cd /root/tchallenge-service/source && gradle bootRun"
+
+  tch_front:
+    image: node:latest
+    container_name: tch_front
+    depends_on:
+      - tch_back
+    ports:
+      - 4200:4200
+    volumes:
+      - ../tchallenge-participant:/root/tchallenge-participant
