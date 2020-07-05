@@ -20,6 +20,7 @@ services:
     ports:
       - 4567:4567
     volumes:
+      - ./gradle_cache:/home/gradle/.gradle
       - ../tchallenge-service:/root/tchallenge-service
     command: /bin/sh -c "cd /root/tchallenge-service/source && gradle bootRun"
 
