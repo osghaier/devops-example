@@ -34,7 +34,7 @@ services:
     volumes:
       - ./npm_cache:/root/.npm
       - ../tchallenge-participant:/root/tchallenge-participant
-    command: /bin/sh -c "cd /root/tchallenge-participant/source && npm run install-start -- --host 0.0.0.0"
+    command: /bin/sh -c "cd /root/tchallenge-participant/source && npm run install-start --host 0.0.0.0 --disable-host-check"
 
 volumes:
   npm_cache:
