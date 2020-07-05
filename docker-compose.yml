@@ -20,7 +20,7 @@ services:
     ports:
       - 4567:4567
     volumes:
-      - ./gradle_cache:/home/gradle/.gradle
+      - ./gradle_cache:/home/gradle/.gradle/caches
       - ../tchallenge-service:/root/tchallenge-service
     command: /bin/sh -c "cd /root/tchallenge-service/source && gradle bootRun"
 
@@ -33,4 +33,4 @@ services:
       - 4200:4200
     volumes:
       - ../tchallenge-participant:/root/tchallenge-participant
-    command: /bin/sh -c "cd /root/tchallenge-participant/source && npm -v && npm install && ll /usr/local/lib/"
+    command: /bin/sh -c "cd /root/tchallenge-participant/source && npm -v && npm install && ls -al /usr/local/lib/"
