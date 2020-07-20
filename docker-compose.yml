@@ -5,6 +5,7 @@ services:
     container_name: mongo_db
     environment:
       MONGO_INITDB_DATABASE: tchallenge
+    network_mode: "host"
     ports:
       - 27017:27017
     volumes:
@@ -30,6 +31,7 @@ services:
     container_name: tch_front
     depends_on:
       - tch_back
+    network_mode: "host"
     ports:
       - 4200:4200
     volumes:
