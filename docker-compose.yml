@@ -17,6 +17,7 @@ services:
     container_name: tch_back
     depends_on:
       - mongo_db
+    network_mode: "host"
     ports:
       - 4567:4567
     volumes:
